@@ -1,0 +1,25 @@
+spring:
+#  view:
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://www.leonwang.tech:3306/dawn?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    username: sp20
+    password: 1qaz2wsx
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initSize: 5
+    maxActive: 20
+    maxWait: 6000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 5
+    timeBetweenEvictionRunsMillis: 60000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+        ddl-auto: validate
+    show-sql: true
+
+application:
+  message: Hello Phil
+
